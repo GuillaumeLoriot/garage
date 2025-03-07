@@ -1,0 +1,72 @@
+body {
+  
+    .errors{
+        color: red;
+    }
+    .add {
+        font-size: 30px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        background-color: rgb(35, 211, 15);
+        margin: 50px;
+        border: solid rgb(4, 4, 4) 1px;
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .card {
+            margin: 50px;
+            width: 450px;
+            display: flex;
+
+            img {
+                width: 250px;
+                height: 170px;
+            }
+
+            .info {}
+
+            .card_buttons {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .update {
+                    font-size: 18px;
+                    text-decoration: none;
+                    text-align: center;
+                    font-weight: bold;
+                    color: black;
+                    background-color: blue;
+                    margin-bottom: 40px;
+                    border: solid rgb(4, 4, 4) 1px;
+                    border-radius: 4px;
+                    padding: 10px;
+                }
+
+                .delete {
+                    font-size: 18px;
+                    text-decoration: none;
+                    text-align: center;
+                    font-weight: bold;
+                    color: black;
+                    background-color: rgb(243, 7, 7);
+                    margin-bottom: 40px;
+                    border: solid rgb(4, 4, 4) 1px;
+                    border-radius: 4px;
+                    padding: 10px;
+
+                }
+
+            }
+        }
+    }
+
+}

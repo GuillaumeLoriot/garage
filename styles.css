@@ -51,22 +51,39 @@ body {
                     padding: 10px;
                 }
 
-                .delete {
-                    font-size: 18px;
-                    text-decoration: none;
-                    text-align: center;
-                    font-weight: bold;
-                    color: black;
-                    background-color: rgb(243, 7, 7);
-                    margin-bottom: 40px;
-                    border: solid rgb(4, 4, 4) 1px;
-                    border-radius: 4px;
-                    padding: 10px;
-
-                }
+               
 
             }
         }
     }
 
+}
+div{
+
+    .delete {
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        background-color: rgb(243, 7, 7);
+        margin-bottom: 40px;
+        border: solid rgb(4, 4, 4) 1px;
+        border-radius: 4px;
+        padding: 10px;
+    
+    }
+    .cancel {
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        color: black;
+        background-color: rgb(135, 155, 139);
+        margin-bottom: 40px;
+        border: solid rgb(4, 4, 4) 1px;
+        border-radius: 4px;
+        padding: 10px;
+    
+    }
 }

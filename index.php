@@ -20,8 +20,8 @@ foreach ($cars as $car) {
             <p><?php echo ($car['brand'] . ",  " . $car['horsePower'] . " chevaux"); ?></p>
         </div>
         <div class="card_buttons">
-            <a href="update.php?=<?php echo($car["id"]); ?>" class="update">Modifier</a>
-            <a href="delete.php?=<?php echo($car["id"]); ?>" class="delete">Supprimer</a>
+            <a href="update.php?id=<?php echo($car["id"]); ?>" class="update">Modifier</a>
+            <a href="delete.php?id=<?php echo($car["id"]); ?>" class="delete">Supprimer</a>
         </div>
     </Div>
 

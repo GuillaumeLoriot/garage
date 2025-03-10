@@ -7,6 +7,7 @@ $pdo = connectDB();
 $requete = $pdo->query("SELECT * FROM car;");
 $cars = $requete->fetchAll();
 ?>
+<h1>le super garage de la mort qui tue</h1>
 <a href="add.php" class="add">Ajouter un véhicule</a>
 <section>
 <?php

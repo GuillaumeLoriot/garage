@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
 
 ?>
     <Div class="card">
-        <h2>confirmez-vous la supression de cette voiture?</h2>
+        <h2>confirmez-vous la supression de cette voiture</h2>
         <img src="images/<?php echo ($car['image']); ?>" alt="">
         <div class="info">
             <h2><?php echo ($car['model']); ?></h2>

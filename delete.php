@@ -6,11 +6,15 @@ if (isset($_GET['id'])) {
     $car_id = $_GET['id'];
     require_once("connectDB.php");
     $pdo = connectDB();
+
     $selected_car_request = $pdo->prepare("SELECT * FROM car WHERE `id` = :id;");
     $selected_car_request->execute([
         ':id' => $car_id
     ]);
     $car = $selected_car_request->fetch();
+    if($car == false){
+        header('location:index.php');
+    }
 
 ?>
     <Div class="card">
@@ -35,6 +39,9 @@ if (isset($_GET['id'])) {
         ]);
         header('location:index.php');
     }
+}
+else{
+    header('location:index.php');
 }
 require_once("footer.php");
 ?>

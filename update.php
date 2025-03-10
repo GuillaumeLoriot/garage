@@ -12,7 +12,9 @@ if (isset($_GET['id'])) {
         ':id' => $car_id
     ]);
     $car = $selected_car_request->fetch();
-    var_dump($car);
+    if($car == false){
+        header('location:index.php');
+    }
 
 ?>
     <Div class="card">
@@ -25,10 +27,11 @@ if (isset($_GET['id'])) {
 
     </Div>
 <?php
+} else {
+    header('location:index.php');
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    var_dump($_GET['id']);
     if (empty($_POST['model'])) {
         $errors['model'] = 'ce champ ne peut pas être vide';
     }
@@ -42,8 +45,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['image'] = 'ce champ ne peut pas être vide';
     }
     if (empty($errors)) {
-
-        require_once("connectDB.php");
         $pdo = connectDB();
         $update_request = $pdo->prepare("UPDATE car SET `id` = :id,  `model` = :model, `brand` = :brand, `horsePower` = :horsePower, `image` = :image WHERE `id` = :id;");
         $update_request->execute([
@@ -95,4 +96,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <?php
 require_once('footer.php');
+
 ?>

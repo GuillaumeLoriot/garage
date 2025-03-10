@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errors)) {
         require_once("connectDB.php");
         $pdo = connectDB();
-        $insert_request = $pdo->prepare("INSERT INTO `car` (`id`, `model`, `brand`, `horsePower`, `image`) VALUES (:id, :model, :brand, :horsePower, :image)");
+        $insert_request = $pdo->prepare("INSERT INTO `car` (`id`, `model`, `brand`, `horsePower`, `image`) VALUES (:id, :model, :brand, :horsePower, :image);");
         $insert_request->execute([
             ':id' => 'NULL',
             ':model' => $_POST['model'],

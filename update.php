@@ -57,44 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('location:index.php');
     }
 }
-?>
-<form method="POST" action="update.php?id=<?php echo ($car['id']); ?>">
-    <label for="model">Modèle</label>
-    <input type="text" name="model" placeholder="<?php echo ($car['model']); ?>">
-    <?php if (isset($errors['model'])) {
-    ?>
-        <p class="errors"><?php echo ($errors['model']); ?></p>
-    <?php
-    }
-    ?>
-    <label for="brand">Marque</label>
-    <input type="text" name="brand" placeholder="<?php echo ($car['brand']); ?>">
-    <?php if (isset($errors['brand'])) {
-    ?>
-        <p class="errors"><?php echo ($errors['brand']); ?></p>
-    <?php
-    }
-    ?>
-    <label for="horsePower">nombre de chevaux</label>
-    <input type="number" name="horsePower" placeholder="<?php echo ($car['horsePower']); ?>">
-    <?php if (isset($errors['horsePower'])) {
-    ?>
-        <p class="errors"><?php echo ($errors['horsePower']); ?></p>
-    <?php
-    }
-    ?>
-    <label for="image">nom du fichier image de la voiture</label>
-    <input type="text" name="image" placeholder="<?php echo ($car['image']); ?>">
-    <?php if (isset($errors['image'])) {
-    ?>
-        <p class="errors"><?php echo ($errors['image']); ?></p>
-    <?php
-    }
-    ?>
-    <input type="submit" value="valider">
-</form>
-
-<?php
+require_once('form.php');
 require_once('footer.php');
 
 ?>

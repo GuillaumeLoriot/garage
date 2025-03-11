@@ -9,11 +9,13 @@ body {
         text-decoration: none;
         border-radius: 3px;
         background-color: rgb(68, 28, 106);
+        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
     }
     a:hover{
         padding: 3px;
         border-radius: 3px;
         border: solid rgb(4, 4, 4) 3px;
+        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
     }
   
     .errors{
@@ -30,6 +32,7 @@ body {
         border: solid rgb(4, 4, 4) 1px;
         border-radius: 4px;
         padding: 10px;
+        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
     }
 
     section {
@@ -37,13 +40,15 @@ body {
         flex-wrap: wrap;
         justify-content: space-around;
             .card {
-            margin: 50px;
-            width: 450px;
+            margin: 20px;
+            
             display: flex;
 
             img {
-                width: 250px;
-                height: 170px;
+                width: 240px;
+                height: 165px;
+                margin: 5px;
+               
             }
 
             .info {}
@@ -64,10 +69,12 @@ body {
                     border: solid rgb(4, 4, 4) 1px;
                     border-radius: 4px;
                     padding: 10px;
+                    box-shadow: rgb(190, 189, 189) 5px 5px 15px;
                 }
                 .update:hover{
                     padding: 12px;
                     border: solid rgb(4, 4, 4) 3px;
+                    box-shadow: rgb(190, 189, 189) 5px 5px 15px;
                 }
 
                
@@ -90,12 +97,14 @@ div{
         border: solid rgb(4, 4, 4) 1px;
         border-radius: 4px;
         padding: 10px;
+        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
         
     
     }
     .delete:hover{
         padding: 12px;
         border: solid rgb(4, 4, 4) 3px;
+        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
     }
     .cancel {
         font-size: 18px;
@@ -108,11 +117,13 @@ div{
         border: solid rgb(4, 4, 4) 1px;
         border-radius: 4px;
         padding: 10px;
+        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
     
     }
     .cancel:hover{
         padding: 12px;
         border: solid rgb(4, 4, 4) 3px;
+        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
     }
 }
 .champForm{
@@ -138,4 +149,11 @@ div{
         border: solid rgb(4, 4, 4) 1px;
         border-radius: 4px;
         padding: 7px;
+        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
+}
+.card{
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: rgb(190, 189, 189) 5px 5px 15px;
+    padding: 35px 20px 35px;
 }

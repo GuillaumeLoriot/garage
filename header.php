@@ -7,6 +7,20 @@
     <title>Garage</title>
 </head>
 <body>
-    <a href="index.php">accueil</a>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                <a href="admin.php">Accueil</a>
+                </li>
+                <li>
+                <a href="login.php">Connexion</a>
+                </li>
+                <li>
+                <a href="logout.php">Déconnexion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     

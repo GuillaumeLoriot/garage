@@ -4,33 +4,41 @@ require_once('header.php');
 // $pass = password_hash("admin", PASSWORD_DEFAULT);
 // var_dump($pass);
 $errors = [];
+$user;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    if(isset($_POST['username']) == false || strlen($_POST['username']) < 4){
+    if (isset($_POST['username']) == false || strlen($_POST['username']) < 4) {
         $errors['username'] = 'le champ username doit faire minimum 4 charactères';
     }
-    if(isset($_POST['password']) == false || strlen($_POST['password']) < 4){
+    if (isset($_POST['password']) == false || strlen($_POST['password']) < 4) {
         $errors['password'] = 'le champ password doit faire minimum 4 charactères';
     }
-    if (empty($errors)){
+    if (empty($errors)) {
 
         require_once('connectDB.php');
         $pdo = connectDB();
         $user_request = $pdo->prepare("SELECT * FROM `user` WHERE `username` = :username;");
-        $user_request -> execute([
+        $user_request->execute([
             ':username' => $_POST['username']
         ]);
         $user = $user_request->fetch();
-        if ($_POST['username'] == $user['username']) {
-            if (password_verify($_POST['password'], $user['password'])) {
-                echo ('ca marche ');
-            } else {
-                echo ('identifiant ou password incorrect');
-            }
+
+        if($user == false){
+            echo ('identifiant inexistant');
+        }
+        else{
+            if ($_POST["username"] == $user["username"]) {
+                if (password_verify($_POST['password'], $user['password'])) {
+                    session_start();
+                    $_SESSION["username"] = $user["username"];
+                    header("location: admin.php");
+                } else {
+                    echo ('identifiant ou password incorrect');
+                }
+            } 
+
         }
     }
-
-   
 }
 ?>
 <form action="login.php" method="POST">
@@ -55,4 +63,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php
 require_once('footer.php');
 ?>
-

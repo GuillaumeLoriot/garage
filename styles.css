@@ -1,26 +1,42 @@
 body {
-    h1{
+    header {
+        background: rgb(10, 9, 92);
+        background: linear-gradient(222deg, rgba(10, 9, 92, 0.7456232492997199) 37%, rgba(114, 132, 176, 0.9164915966386554) 68%);
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+            height: 60px;
+
+            li {
+                a {
+                    font-size: 40px;
+                    color: rgb(248, 247, 247);
+                    text-decoration: none;
+                    border-radius: 3px;
+                    height: 200px;
+                
+                    
+                }
+                a:hover{
+                    box-shadow: rgb(190, 189, 189) 5px 5px 15px;
+                }
+
+            }
+        }
+    }
+
+    h1 {
         font-size: 50px;
         text-align: center;
     }
-    a{
-        font-size: 40px;
-        color: rgb(248, 247, 247);
-        text-decoration: none;
-        border-radius: 3px;
-        background-color: rgb(68, 28, 106);
-        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
-    }
-    a:hover{
-        padding: 3px;
-        border-radius: 3px;
-        border: solid rgb(4, 4, 4) 3px;
-        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
-    }
-  
-    .errors{
+
+    .errors {
         color: red;
     }
+
     .add {
         font-size: 30px;
         text-decoration: none;
@@ -39,16 +55,17 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-            .card {
+
+        .card {
             margin: 20px;
-            
+
             display: flex;
 
             img {
                 width: 240px;
                 height: 165px;
                 margin: 5px;
-               
+
             }
 
             .info {}
@@ -71,20 +88,22 @@ body {
                     padding: 10px;
                     box-shadow: rgb(190, 189, 189) 5px 5px 15px;
                 }
-                .update:hover{
+
+                .update:hover {
                     padding: 12px;
                     border: solid rgb(4, 4, 4) 3px;
                     box-shadow: rgb(190, 189, 189) 5px 5px 15px;
                 }
 
-               
+
 
             }
         }
     }
 
 }
-div{
+
+div {
 
     .delete {
         font-size: 18px;
@@ -98,14 +117,16 @@ div{
         border-radius: 4px;
         padding: 10px;
         box-shadow: rgb(190, 189, 189) 5px 5px 15px;
-        
-    
+
+
     }
-    .delete:hover{
+
+    .delete:hover {
         padding: 12px;
         border: solid rgb(4, 4, 4) 3px;
         box-shadow: rgb(190, 189, 189) 5px 5px 15px;
     }
+
     .cancel {
         font-size: 18px;
         text-decoration: none;
@@ -118,40 +139,46 @@ div{
         border-radius: 4px;
         padding: 10px;
         box-shadow: rgb(190, 189, 189) 5px 5px 15px;
-    
+
     }
-    .cancel:hover{
+
+    .cancel:hover {
         padding: 12px;
         border: solid rgb(4, 4, 4) 3px;
         box-shadow: rgb(190, 189, 189) 5px 5px 15px;
     }
 }
-.champForm{
-    label{
+
+.champForm {
+    label {
         font-size: 20px;
         font-weight: bold;
         margin: 20px;
     }
-    input{
+
+    input {
         width: 300px;
     }
+
     margin: 20px;
-   
+
 }
-.confirm{
+
+.confirm {
     font-size: 30px;
-        text-decoration: none;
-        text-align: center;
-        font-weight: bold;
-        color: black;
-        background-color: rgb(48, 205, 13);
-        margin: 30px;
-        border: solid rgb(4, 4, 4) 1px;
-        border-radius: 4px;
-        padding: 7px;
-        box-shadow: rgb(190, 189, 189) 5px 5px 15px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(48, 205, 13);
+    margin: 30px;
+    border: solid rgb(4, 4, 4) 1px;
+    border-radius: 4px;
+    padding: 7px;
+    box-shadow: rgb(190, 189, 189) 5px 5px 15px;
 }
-.card{
+
+.card {
     width: 450px;
     border-radius: 5px;
     box-shadow: rgb(190, 189, 189) 5px 5px 15px;

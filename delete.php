@@ -1,6 +1,11 @@
 <?php
 require_once("header.php");
 
+session_start();
+if (!isset($_SESSION["username"])) {
+    header('location: index.php');
+}
+
 if (isset($_GET['id'])) {
     $car_id = $_GET['id'];
     require_once("connectDB.php");

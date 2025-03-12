@@ -1,6 +1,11 @@
 <?php
 require_once('header.php');
 require_once('functions.php');
+
+session_start();
+if (!isset($_SESSION["username"])) {
+    header('location: index.php');
+}
 // je ne vérifie pas si le formulaire est validé avec $_SERVER['REQUEST_METHOD'] === 'POST' a cet endroi du code car je veux afficher 
 // une card avec les infos et l'image de la voiture selectionnée avant de valider le formulaire
 

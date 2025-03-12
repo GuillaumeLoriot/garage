@@ -16,18 +16,17 @@ if (isset($_GET['id'])) {
     ]);
     $car = $selected_car_request->fetch();
     if ($car == false) {
-        header('location:index.php');
+        header('location:admin.php');
     }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
         $delete_request = $pdo->prepare("DELETE FROM car WHERE `id` = :id");
         $delete_request->execute([
             ':id' => $car_id
         ]);
-        header('location:index.php');
+        header('location:admin.php');
     }
 } else {
-    header('location:index.php');
+    header('location:admin.php');
 }
 
 ?>
@@ -40,7 +39,7 @@ if (isset($_GET['id'])) {
     </div>
     <form method="POST" action="delete.php?id=<?php echo ($car_id); ?>">
         <input type="submit" value="Confirmer" class="delete">
-        <button formaction="index.php" class="cancel">retour à l'accueil</button>
+        <button formaction="admin.php" class="cancel">retour à l'accueil</button>
     </form>
 </Div>
 

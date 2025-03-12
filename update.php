@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
     ]);
     $car = $selected_car_request->fetch();
     if ($car == false) {
-        header('location:index.php');
+        header('location:admin.php');
     }
 
 ?>
@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
     </Div>
 <?php
 } else {
-    header('location:index.php');
+    header('location:admin.php');
 }
 // verification si formulaire est validé 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // si pas d'erreur (tableau vide), appel de la fonction updatecar qui execute la requette d'ajout en bdd puis redirection vers index
     if (empty($errors)) {
         updateCar($_GET, $_POST);
-        header('location:index.php');
+        header('location:admin.php');
     }
 }
 ?>

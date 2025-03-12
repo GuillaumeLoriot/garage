@@ -5,7 +5,6 @@ session_start();
 if(!isset($_SESSION["username"])){
     header('location: index.php');
 }
-
 require_once("connectDB.php");
 $pdo = connectDB();
 $requete = $pdo->query("SELECT * FROM car;");

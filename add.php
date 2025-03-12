@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = verifyErrors($_POST);
     if (empty($errors)) {
         addNewCar($_POST);
-        header('location:index.php');
+        header('location:admin.php');
     }
 }
 ?>

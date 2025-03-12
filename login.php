@@ -23,20 +23,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         $user = $user_request->fetch();
 
-        if($user == false){
+        if ($user == false) {
             echo ('identifiant inexistant');
-        }
-        else{
-            if ($_POST["username"] == $user["username"]) {
-                if (password_verify($_POST['password'], $user['password'])) {
-                    session_start();
-                    $_SESSION["username"] = $user["username"];
-                    header("location: admin.php");
-                } else {
-                    echo ('identifiant ou password incorrect');
-                }
-            } 
-
+        } else {
+            if (password_verify($_POST['password'], $user['password'])) {
+                session_start();
+                $_SESSION["username"] = $user["username"];
+                header("location: admin.php");
+            } else {
+                echo ('identifiant ou password incorrect');
+            }
         }
     }
 }

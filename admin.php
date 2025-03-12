@@ -11,6 +11,7 @@ $requete = $pdo->query("SELECT * FROM car;");
 $cars = $requete->fetchAll();
 ?>
 <h1>LE GARAGE DU CRUD</h1>
+<p id="welcomeMessage">Bienvenue  <?php echo($_SESSION["username"]) ?></p>
 <a href="add.php" class="add">Ajouter un véhicule</a>
 <section>
     <?php

@@ -1,4 +1,8 @@
 body {
+    #welcomeMessage{
+        font-size: 30px;
+        text-align: center;
+    }
     header {
         background: rgb(10, 9, 92);
         background: linear-gradient(222deg, rgba(10, 9, 92, 0.7456232492997199) 37%, rgba(114, 132, 176, 0.9164915966386554) 68%);
